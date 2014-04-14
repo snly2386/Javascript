@@ -84,11 +84,19 @@ define(function() {
         var sorted = arr.sort();
 
         for(var i = 0; i < sorted.length-1; i++ ) {
-            if(sorted[i+1] == sorted[i]) {
-                newarray.push(sorted[i])
+             if((sorted[i+1] == sorted[i]) && (newarray.indexOf(sorted[i]) == -1)) {
+                newarray.push(sorted[i]);
             }
         }
-            return newarray;
+
+        // var blob = function () {
+        //   if(sorted[i+1] == sorted[i]) {
+        //         newarray.push(sorted[i]);
+        //         blob();
+        //     }
+        // }
+        
+        return newarray;
 
     },
 
@@ -111,3 +119,7 @@ define(function() {
     }
   };
 });
+
+
+
+
